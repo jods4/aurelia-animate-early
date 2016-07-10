@@ -1,0 +1,29 @@
+<template>
+  <div class="uk-tab-center uk-margin-top">
+    <ul class=uk-tab>
+      <li class="${ router.currentInstruction.config.moduleId == './pages/A' && 'uk-active' }">
+        <a href="#/A">Page A</a>
+      </li>
+      <li class="${ router.currentInstruction.config.moduleId == './pages/B' && 'uk-active' }">
+        <a href="#/B">Page B</a>
+      </li>
+    </ul>
+  </div>
+  
+  <router-view class="uk-container-center uk-margin-top"" 
+               style="display: block; max-width: 400px; position: relative; min-height: 201px">
+    <div if.bind="router.isNavigating"
+         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; animation-delay: ${spinnerDelay}"
+         class=uk-animation-fade>    
+      <i class="uk-icon-spinner uk-icon-spin uk-icon-large"></i>
+    </div>
+  </router-view>
+  
+  <hr />
+
+  <div style="padding: 0 16px">
+    Delay: <span style="display: inline-block; width: 60px; text-align: right">${delay} ms</span>
+    <input type=range min=0 max=2000 step=50 value.bind=delay 
+           style="vertical-align: middle; margin-left: 16px" />
+  </div>  
+</template>

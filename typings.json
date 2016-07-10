@@ -1,0 +1,10 @@
+{
+  "name": "aurelia-animate-early",
+  "dependencies": {
+    "aurelia-dependency-injection": "github:aurelia/dependency-injection",
+    "aurelia-framework": "github:aurelia/framework",
+    "aurelia-history": "github:aurelia/history",
+    "aurelia-metadata": "github:aurelia/metadata",
+    "aurelia-router": "github:aurelia/router"
+  }
+}
